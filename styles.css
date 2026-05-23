@@ -2913,8 +2913,8 @@ section[id] {
 }
 
 .reveal-ready .reveal:not(.is-visible) {
-  --reveal-duration: 220ms;
-  --reveal-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --reveal-duration: 90ms;
+  --reveal-ease: linear;
   --reveal-delay: 0ms;
   opacity: 0;
   filter: blur(14px);
