@@ -2782,6 +2782,15 @@ section[id] {
   box-shadow: 0 34px 88px rgba(0, 0, 0, 0.25);
 }
 
+.form-honey {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .contact-form label {
   display: grid;
   gap: 8px;
@@ -2818,6 +2827,46 @@ section[id] {
 
 .contact-form ::placeholder {
   color: rgba(255, 255, 255, 0.42);
+}
+
+.contact-form button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.form-status {
+  display: none;
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.form-status.is-visible {
+  display: block;
+}
+
+.form-status.is-success {
+  border-color: rgba(255, 210, 109, 0.34);
+  background: rgba(255, 210, 109, 0.14);
+  color: #fff;
+}
+
+.form-status.is-error {
+  border-color: rgba(180, 93, 60, 0.45);
+  background: rgba(180, 93, 60, 0.16);
+  color: #fff;
+}
+
+.form-status a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .footer {

@@ -17,6 +17,7 @@ const translatableEls = document.querySelectorAll("[data-i18n]");
 const placeholderEls = document.querySelectorAll("[data-i18n-placeholder]");
 const metaDescription = document.querySelector('meta[name="description"]');
 const contactForm = document.querySelector("[data-contact-form]");
+const formStatus = document.querySelector("[data-form-status]");
 const journeySection = document.querySelector(".process-section");
 const useCaseSection = document.querySelector(".use-case-section");
 const journeySteps = document.querySelectorAll("[data-journey-step]");
@@ -590,26 +591,55 @@ languageButtons.forEach((button) => {
 
 contactForm?.addEventListener("submit", (event) => {
   event.preventDefault();
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  const originalButtonText = submitButton?.textContent || "";
   const data = new FormData(contactForm);
-  const name = String(data.get("name") || "").trim();
-  const company = String(data.get("company") || "").trim();
-  const email = String(data.get("email") || "").trim();
-  const workflow = String(data.get("workflow") || "").trim();
-  const subject = `AI workflow audit${company ? ` - ${company}` : ""}`;
-  const body = [
-    "Hi SwiftBuild,",
-    "",
-    "I would like to book an AI workflow audit.",
-    "",
-    `Name: ${name || "-"}`,
-    `Company: ${company || "-"}`,
-    `Email: ${email || "-"}`,
-    "",
-    "Workflow to review:",
-    workflow || "-",
-  ].join("\n");
 
-  window.location.href = `mailto:info@swiftbuild.agency?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  if (formStatus) {
+    formStatus.textContent =
+      currentLang === "sv" ? "Skickar din förfrågan..." : "Sending your request...";
+    formStatus.className = "form-status is-visible";
+  }
+
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = currentLang === "sv" ? "Skickar..." : "Sending...";
+  }
+
+  fetch(contactForm.action, {
+    method: "POST",
+    body: data,
+    headers: { Accept: "application/json" },
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      contactForm.reset();
+      if (formStatus) {
+        formStatus.textContent =
+          currentLang === "sv"
+            ? "Tack! Din förfrågan är skickad. Vi återkommer till dig snart."
+            : "Thank you. Your request has been sent and we will get back to you soon.";
+        formStatus.className = "form-status is-visible is-success";
+      }
+    })
+    .catch(() => {
+      if (formStatus) {
+        formStatus.innerHTML =
+          currentLang === "sv"
+            ? 'Något gick fel. Maila oss direkt på <a href="mailto:info@swiftbuild.agency">info@swiftbuild.agency</a>.'
+            : 'Something went wrong. Email us directly at <a href="mailto:info@swiftbuild.agency">info@swiftbuild.agency</a>.';
+        formStatus.className = "form-status is-visible is-error";
+      }
+    })
+    .finally(() => {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
+    });
 });
 
 if ("IntersectionObserver" in window) {

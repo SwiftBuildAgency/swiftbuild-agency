@@ -679,10 +679,14 @@
             </a>
           </div>
 
-          <form class="contact-form reveal" action="mailto:info@swiftbuild.agency" method="post" enctype="text/plain" data-contact-form>
+          <form class="contact-form reveal" action="https://formsubmit.co/ajax/info@swiftbuild.agency" method="post" data-contact-form>
+            <input type="hidden" name="_subject" value="New AI workflow audit request from swiftbuild.agency">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="form-honey" aria-hidden="true">
             <label>
               <span data-i18n="form.name">Name</span>
-              <input type="text" name="name" autocomplete="name" placeholder="Your name" data-i18n-placeholder="form.namePlaceholder">
+              <input type="text" name="name" autocomplete="name" placeholder="Your name" data-i18n-placeholder="form.namePlaceholder" required>
             </label>
             <label>
               <span data-i18n="form.company">Company</span>
@@ -690,13 +694,14 @@
             </label>
             <label>
               <span data-i18n="form.email">Email</span>
-              <input type="email" name="email" autocomplete="email" placeholder="name@company.com" data-i18n-placeholder="form.emailPlaceholder">
+              <input type="email" name="email" autocomplete="email" placeholder="name@company.com" data-i18n-placeholder="form.emailPlaceholder" required>
             </label>
             <label>
               <span data-i18n="form.workflow">What do you want to automate?</span>
               <textarea name="workflow" rows="5" placeholder="Example: support tickets, CRM follow-up, reporting, document workflows..." data-i18n-placeholder="form.workflowPlaceholder"></textarea>
             </label>
             <button class="button primary" type="submit" data-i18n="form.submit">Send audit request</button>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
           </form>
         </div>
       </section>
