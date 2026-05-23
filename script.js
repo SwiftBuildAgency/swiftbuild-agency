@@ -644,16 +644,24 @@ contactForm?.addEventListener("submit", (event) => {
 
 if ("IntersectionObserver" in window) {
   root.classList.add("reveal-ready");
+  revealEls.forEach((element, index) => {
+    element.style.setProperty("--reveal-delay", `${Math.min(index % 6, 4) * 70}ms`);
+    element.dataset.scrollState = element.getBoundingClientRect().top < window.innerHeight / 2 ? "above" : "below";
+  });
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
+        entry.target.dataset.scrollState =
+          entry.boundingClientRect.top < window.innerHeight * 0.5 ? "above" : "below";
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
+        } else {
+          entry.target.classList.remove("is-visible");
         }
       });
     },
-    { rootMargin: "0px 0px -10% 0px", threshold: 0.12 },
+    { rootMargin: "-8% 0px -12% 0px", threshold: [0, 0.12, 0.28] },
   );
 
   revealEls.forEach((element) => observer.observe(element));
