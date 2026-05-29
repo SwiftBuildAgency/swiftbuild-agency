@@ -20,8 +20,11 @@ const translations = {
     metaTitle: "SwiftBuild | AI implementation for real workflows",
     metaDescription:
       "SwiftBuild implements practical AI workflows, internal tools and automation for support, documents, CRM follow-up and operations.",
+    "nav.problems": "Problems",
     "nav.services": "Services",
     "nav.approach": "Approach",
+    "nav.proof": "Proof",
+    "nav.difference": "Why us",
     "nav.faq": "FAQ",
     "nav.cta": "Work with us",
     "hero.title": "AI workflows that actually get used.",
@@ -118,8 +121,11 @@ const translations = {
     metaTitle: "SwiftBuild | AI-implementation för riktiga arbetsflöden",
     metaDescription:
       "SwiftBuild implementerar praktiska AI-flöden, interna verktyg och automation för support, dokument, CRM-uppföljning och operations.",
+    "nav.problems": "Problem",
     "nav.services": "Tjänster",
     "nav.approach": "Metod",
+    "nav.proof": "Bevis",
+    "nav.difference": "Varför oss",
     "nav.faq": "FAQ",
     "nav.cta": "Jobba med oss",
     "hero.title": "AI-flöden som faktiskt börjar användas.",

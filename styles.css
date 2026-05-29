@@ -75,8 +75,8 @@ button {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 28px;
-  width: min(1240px, calc(100% - 40px));
+  gap: 22px;
+  width: min(1320px, calc(100% - 40px));
   min-height: 70px;
   padding: 10px 12px 10px 22px;
   border: 1px solid rgba(17, 17, 15, 0.1);
@@ -103,7 +103,7 @@ button {
 .site-nav {
   display: flex;
   justify-content: center;
-  gap: clamp(28px, 5vw, 72px);
+  gap: clamp(16px, 2.4vw, 34px);
 }
 
 .site-nav a,
