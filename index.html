@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SwiftBuild | AI workflows that actually get used</title>
+    <title>SwiftBuild | AI implementation for real workflows</title>
     <meta
       name="description"
-      content="SwiftBuild implements AI workflows, internal tools and automation connected to your real systems and operating routines."
+      content="SwiftBuild implements AI workflows, internal tools and automation for support, documents, CRM follow-up and operations."
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600;700;800;900&family=Roboto+Mono:wght@500;600;700&display=swap"
       rel="stylesheet"
     >
     <link rel="icon" href="assets/swiftbuild-favicon.png" type="image/png">
@@ -24,659 +24,298 @@
       </a>
 
       <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="#audit" data-i18n="nav.audit">Audit</a>
-        <a href="#use-cases" data-i18n="nav.useCases">Use cases</a>
-        <a href="#process" data-i18n="nav.process">Process</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#method" data-i18n="nav.method">Method</a>
         <a href="#proof" data-i18n="nav.proof">Proof</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
       </nav>
 
-      <div class="language-toggle" aria-label="Language selector" data-lang-switch>
-        <button class="is-active" type="button" data-lang-option="en">EN</button>
-        <button type="button" data-lang-option="sv">SV</button>
+      <div class="header-actions">
+        <div class="language-toggle" aria-label="Language selector">
+          <button class="is-active" type="button" data-lang-option="en">EN</button>
+          <button type="button" data-lang-option="sv">SV</button>
+        </div>
+        <a class="nav-cta" href="#contact" data-i18n="nav.cta">Work with us</a>
+        <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" data-menu-button>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-
-      <a class="nav-cta" href="#contact" data-i18n="nav.cta">Book workflow audit</a>
-
-      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" data-menu-button>
-        <span></span>
-        <span></span>
-      </button>
     </header>
 
     <div class="mobile-panel" data-mobile-panel>
-      <a href="#audit" data-i18n="nav.audit">Audit</a>
-      <a href="#use-cases" data-i18n="nav.useCases">Use cases</a>
-      <a href="#process" data-i18n="nav.process">Process</a>
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#method" data-i18n="nav.method">Method</a>
       <a href="#proof" data-i18n="nav.proof">Proof</a>
-      <a href="#contact" data-i18n="nav.cta">Book workflow audit</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#contact" data-i18n="nav.cta">Work with us</a>
     </div>
 
-    <a class="mobile-sticky-cta" href="#contact" data-sticky-cta data-i18n="nav.mobileCta">Book AI audit</a>
-    <div class="cursor-aura" data-cursor-aura aria-hidden="true"></div>
-
     <main id="top">
-      <section class="hero">
-        <canvas class="ambient-canvas" data-flow-canvas aria-hidden="true"></canvas>
-        <div class="hero-sheen" aria-hidden="true"></div>
-        <div class="hero-grid container">
-          <div class="hero-copy reveal">
-            <p class="kicker" data-i18n="hero.kicker">AI implementation studio</p>
-            <h1 data-i18n="hero.title">AI workflows that actually get used.</h1>
-            <p class="hero-lede" data-i18n="hero.lede">
-              SwiftBuild maps manual workflows, builds AI automation and internal tools,
-              connects them to your systems and measures the effect in daily operations.
-            </p>
-
-            <div class="hero-actions">
-              <a class="button primary" href="#contact" data-i18n="hero.primaryCta">Book an AI workflow audit</a>
-              <a class="button secondary" href="#process" data-i18n="hero.secondaryCta">See the process</a>
-            </div>
+      <section class="hero section-light">
+        <canvas class="ambient-canvas" data-ambient-canvas aria-hidden="true"></canvas>
+        <div class="shell">
+          <p class="slash-label reveal">/ SWIFTBUILD.AGENCY</p>
+          <div class="hero-heading reveal">
+            <h1 data-i18n="hero.title">AI implementation for teams losing hours to manual admin.</h1>
           </div>
 
-          <div class="operations-console workflow-theatre reveal" aria-label="AI-workflow audit preview">
-            <div class="theatre-glow" aria-hidden="true"></div>
-            <div class="console-head theatre-head">
-              <span data-i18n="workflow.header">Workflow audit</span>
-              <strong>swiftbuild.agency</strong>
-            </div>
+          <div class="hero-grid">
+            <figure class="hero-object reveal">
+              <img src="assets/swiftbuild-hero-object.png" alt="Abstract SwiftBuild workflow object">
+            </figure>
 
-            <svg class="stage-lines" viewBox="0 0 1000 360" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M285 92 C390 92 402 164 500 164 C598 164 610 92 715 92"></path>
-              <path d="M285 178 C398 178 408 188 500 188 C592 188 602 178 715 178"></path>
-              <path d="M285 264 C390 264 402 212 500 212 C598 212 610 264 715 264"></path>
-            </svg>
-
-            <div class="workflow-stage-grid">
-              <div class="workflow-column source-column">
-                <p class="stage-label" data-i18n="workflow.inputLabel">Input</p>
-                <article class="flow-card is-active" data-depth="7">
-                  <span class="flow-icon">
-                    <svg viewBox="0 0 24 24"><path d="M4 7h16v10H4V7Z"></path><path d="m4 8 8 5 8-5"></path></svg>
-                  </span>
-                  <div>
-                    <strong data-i18n="workflow.input1.title">Mail & inbox</strong>
-                    <small data-i18n="workflow.input1.copy">tickets, leads, questions</small>
-                  </div>
-                </article>
-                <article class="flow-card" data-depth="-5">
-                  <span class="flow-icon">
-                    <svg viewBox="0 0 24 24"><path d="M5 7c0-1.7 3.1-3 7-3s7 1.3 7 3-3.1 3-7 3-7-1.3-7-3Z"></path><path d="M5 7v10c0 1.7 3.1 3 7 3s7-1.3 7-3V7"></path></svg>
-                  </span>
-                  <div>
-                    <strong data-i18n="workflow.input2.title">CRM & order data</strong>
-                    <small data-i18n="workflow.input2.copy">customer, status, history</small>
-                  </div>
-                </article>
-                <article class="flow-card" data-depth="4">
-                  <span class="flow-icon">
-                    <svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7V3Z"></path><path d="M14 3v5h4"></path><path d="M9.5 12h5"></path><path d="M9.5 16h4"></path></svg>
-                  </span>
-                  <div>
-                    <strong data-i18n="workflow.input3.title">Documents</strong>
-                    <small data-i18n="workflow.input3.copy">PDFs, rules, agreements</small>
-                  </div>
-                </article>
+            <div class="hero-panel reveal">
+              <div class="showreel-card">
+                <img src="assets/ai-ops-workspace.png" alt="AI operations workspace dashboard">
+                <span data-i18n="hero.preview">/ IMPLEMENTATION PREVIEW</span>
               </div>
-
-              <div class="workflow-engine" data-depth="-8">
-                <span class="engine-ring ring-one"></span>
-                <span class="engine-ring ring-two"></span>
-                <div class="engine-core">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M12 3 5 7v10l7 4 7-4V7l-7-4Z"></path>
-                    <path d="M12 8v8"></path>
-                    <path d="m8.5 10.5 3.5-2.5 3.5 2.5"></path>
-                    <path d="m8.5 13.5 3.5 2.5 3.5-2.5"></path>
-                  </svg>
-                  <strong data-i18n="workflow.engine.title">AI orchestration</strong>
-                  <small data-i18n="workflow.engine.copy">classify, reason, route</small>
-                </div>
-                <div class="engine-pills">
-                  <span>Policy</span>
-                  <span data-i18n="workflow.engine.memory">Memory</span>
-                  <span data-i18n="workflow.engine.tools">Tools</span>
-                </div>
-              </div>
-
-              <div class="workflow-column output-column">
-                <p class="stage-label" data-i18n="workflow.outputLabel">Output</p>
-                <article class="flow-card output-card-new" data-depth="-6">
-                  <span class="flow-icon">
-                    <svg viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
-                  </span>
-                  <div>
-                    <strong data-i18n="workflow.output1.title">Ticket created</strong>
-                    <small data-i18n="workflow.output1.copy">priority: high</small>
-                  </div>
-                </article>
-                <article class="flow-card output-card-new is-active" data-depth="6">
-                  <span class="flow-icon">
-                    <svg viewBox="0 0 24 24"><path d="M8 12.5 11 15l5-6"></path><path d="M4 7.5 12 3l8 4.5v8.5L12 21l-8-5V7.5Z"></path></svg>
-                  </span>
-                  <div>
-                    <strong data-i18n="workflow.output2.title">Human review</strong>
-                    <small data-i18n="workflow.output2.copy">fallback + approval</small>
-                  </div>
-                </article>
-                <article class="flow-card output-card-new" data-depth="-4">
-                  <span class="flow-icon">
-                    <svg viewBox="0 0 24 24"><path d="M6 20V9"></path><path d="M12 20V4"></path><path d="M18 20v-7"></path></svg>
-                  </span>
-                  <div>
-                    <strong data-i18n="workflow.output3.title">Impact measured</strong>
-                    <small data-i18n="workflow.output3.copy">time, quality, adoption</small>
-                  </div>
-                </article>
-              </div>
-            </div>
-
-            <div class="workflow-metrics-strip" aria-label="Workflow audit resultat">
-              <div>
-                <span>01</span>
-                <strong data-i18n="workflow.metric1.value">18 h/week</strong>
-                <small data-i18n="workflow.metric1.label">identified time</small>
-              </div>
-              <div>
-                <span>02</span>
-                <strong data-i18n="workflow.metric2.value">Human in loop</strong>
-                <small data-i18n="workflow.metric2.label">control points</small>
-              </div>
-              <div>
-                <span>03</span>
-                <strong data-i18n="workflow.metric3.value">Better follow-up</strong>
-                <small data-i18n="workflow.metric3.label">nothing disappears between systems</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="client-band reveal" aria-label="Experience from companies">
-        <div class="container client-band-inner">
-          <div class="client-band-copy">
-            <p data-i18n="clients.kicker">Built with real operators</p>
-            <span data-i18n="clients.copy">Logistics, care, registries, fintech and automotive retail.</span>
-          </div>
-
-          <div class="client-marquee">
-            <div class="client-track">
-              <article class="client-card">
-                <img src="assets/client-fruktkuriren.webp" alt="Fruktkuriren">
-                <strong>Fruktkuriren</strong>
-                <small data-i18n="clients.fruktkuriren">orders, deviations, operations</small>
-              </article>
-              <article class="client-card">
-                <img src="assets/client-omsorgskollen.png" alt="Omsorgskollen">
-                <strong>Omsorgskollen</strong>
-                <small data-i18n="clients.omsorgskollen">structure, documentation, follow-up</small>
-              </article>
-              <article class="client-card">
-                <img src="assets/client-trustledger.png" alt="TrustLedger">
-                <strong>TrustLedger</strong>
-                <small data-i18n="clients.trustledger">data, control, automation</small>
-              </article>
-              <article class="client-card">
-                <img src="assets/client-familjehemsregistret.png" alt="">
-                <strong>Familjehemsregistret</strong>
-                <small data-i18n="clients.familjehemsregistret">registries, verification, internal tools</small>
-              </article>
-              <article class="client-card">
-                <img src="assets/client-stenmarkbil.png" alt="">
-                <strong>Stenmark Bil</strong>
-                <small data-i18n="clients.stenmarkbil">customer flows, CRM, admin</small>
-              </article>
-
-              <article class="client-card" aria-hidden="true">
-                <img src="assets/client-fruktkuriren.webp" alt="">
-                <strong>Fruktkuriren</strong>
-                <small data-i18n="clients.fruktkuriren">orders, deviations, operations</small>
-              </article>
-              <article class="client-card" aria-hidden="true">
-                <img src="assets/client-omsorgskollen.png" alt="">
-                <strong>Omsorgskollen</strong>
-                <small data-i18n="clients.omsorgskollen">structure, documentation, follow-up</small>
-              </article>
-              <article class="client-card" aria-hidden="true">
-                <img src="assets/client-trustledger.png" alt="">
-                <strong>TrustLedger</strong>
-                <small data-i18n="clients.trustledger">data, control, automation</small>
-              </article>
-              <article class="client-card" aria-hidden="true">
-                <img src="assets/client-familjehemsregistret.png" alt="">
-                <strong>Familjehemsregistret</strong>
-                <small data-i18n="clients.familjehemsregistret">registries, verification, internal tools</small>
-              </article>
-              <article class="client-card" aria-hidden="true">
-                <img src="assets/client-stenmarkbil.png" alt="">
-                <strong>Stenmark Bil</strong>
-                <small data-i18n="clients.stenmarkbil">customer flows, CRM, admin</small>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="audit" class="section audit-section">
-        <div class="container split-layout">
-          <div class="section-copy reveal">
-            <p class="kicker" data-i18n="audit.kicker">Start where the friction lives</p>
-            <h2 data-i18n="audit.title">An audit should find the workflow worth automating first.</h2>
-            <p data-i18n="audit.copy">
-              AI gets expensive when you start with technology instead of process. We start
-              with recurring work where data already exists, ownership can be defined and
-              the effect can be measured.
-            </p>
-          </div>
-
-          <div class="audit-panel reveal">
-            <div class="audit-header">
-              <span>Audit canvas</span>
-                <strong data-i18n="audit.priority">Priority</strong>
-            </div>
-            <div class="audit-scanner" aria-hidden="true">
-              <div class="scanner-orbit">
-                <span></span>
-                <span></span>
-                <i></i>
-              </div>
-              <div class="scanner-readout">
-                <small>Scanner</small>
-                <strong data-i18n="audit.detected">4 workflows detected</strong>
-                <p data-i18n="audit.detectedCopy">We rank the flows by volume, data access, risk and measurable impact.</p>
-              </div>
-              <div class="scanner-tags">
-                <span>API</span>
-                <span>CRM</span>
-                <span>Docs</span>
-                <span>Inbox</span>
-              </div>
-            </div>
-            <div class="audit-table">
-              <div class="audit-row">
-                <span>01</span>
-                <strong data-i18n="audit.row1.title">Manual admin</strong>
-                <p data-i18n="audit.row1.copy">high volume</p>
-              </div>
-              <div class="audit-row">
-                <span>02</span>
-                <strong>Support & inbox</strong>
-                <p data-i18n="audit.row2.copy">quick wins</p>
-              </div>
-              <div class="audit-row">
-                <span>03</span>
-                <strong data-i18n="audit.row3.title">Reporting</strong>
-                <p data-i18n="audit.row3.copy">clear ROI</p>
-              </div>
-              <div class="audit-row">
-                <span>04</span>
-                <strong>CRM & leads</strong>
-                <p data-i18n="audit.row4.copy">more pipeline</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section problem-section">
-        <div class="container problem-grid">
-          <div class="problem-lead reveal">
-            <p class="kicker" data-i18n="problem.kicker">The problem we solve</p>
-            <h2 data-i18n="problem.title">Most AI pilots die between demo and deployment.</h2>
-            <div class="problem-map" aria-hidden="true">
-              <svg class="problem-connectors" viewBox="0 0 360 260" preserveAspectRatio="none">
-                <path d="M92 65 C128 70 144 96 180 130"></path>
-                <path d="M280 83 C242 88 218 104 180 130"></path>
-                <path d="M180 204 C180 176 180 158 180 130"></path>
-              </svg>
-              <span class="problem-node node-system">System</span>
-              <span class="problem-node node-data">Data</span>
-              <span class="problem-node node-team">Team</span>
-              <span class="problem-node node-quality" data-i18n="problem.map.quality">Quality</span>
-            </div>
-          </div>
-
-          <div class="problem-list">
-            <article class="problem-item reveal">
-              <span class="problem-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
-                  <path d="M18 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
-                  <path d="M18 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
-                  <path d="M8.6 6.5h6.8"></path>
-                  <path d="M7.8 7.5 16.2 16.5"></path>
-                </svg>
-                <small>01</small>
-              </span>
-              <h3 data-i18n="problem.item1.title">The tools do not talk to each other</h3>
-              <p data-i18n="problem.item1.copy">Data sits in CRM, inboxes, spreadsheets, order flows and documents without one shared operating process.</p>
-            </article>
-            <article class="problem-item reveal">
-              <span class="problem-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M5 4h14v11H5V4Z"></path>
-                  <path d="M8 20h8"></path>
-                  <path d="M12 15v5"></path>
-                  <path d="M8 8h8"></path>
-                  <path d="M8 11h5"></path>
-                </svg>
-                <small>02</small>
-              </span>
-              <h3 data-i18n="problem.item2.title">The team gets yet another system</h3>
-              <p data-i18n="problem.item2.copy">The AI becomes a separate surface instead of helping inside the workflow people already use.</p>
-            </article>
-            <article class="problem-item reveal">
-              <span class="problem-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 3 5 7.5V16l7 5 7-5V7.5L12 3Z"></path>
-                  <path d="M8.5 12.2 11.2 15l4.6-5.5"></path>
-                </svg>
-                <small>03</small>
-              </span>
-              <h3 data-i18n="problem.item3.title">No one owns quality</h3>
-              <p data-i18n="problem.item3.copy">Without logging, fallback and human control, the solution becomes difficult to trust.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="use-cases" class="section use-case-section">
-        <div class="container">
-          <div class="section-copy wide reveal">
-            <p class="kicker" data-i18n="usecases.kicker">What we implement</p>
-            <h2 data-i18n="usecases.title">AI, automation and internal tools around your real processes.</h2>
-          </div>
-
-          <div class="workflow-asset-grid reveal" aria-label="AI workflow examples">
-            <article class="workflow-asset">
-              <img src="assets/ai-ops-workspace.png" alt="AI operations dashboard on a modern workspace monitor">
-              <h3 data-i18n="usecases.asset1.title">Automated operations desk</h3>
-              <p data-i18n="usecases.asset1.copy">A shared view for incoming work, open tasks, documents, approvals and reporting.</p>
-            </article>
-            <article class="workflow-asset">
-              <img src="assets/hero-app-card.webp" alt="Mobile and dashboard interface for operational data">
-              <h3 data-i18n="usecases.asset2.title">Internal tools people use</h3>
-              <p data-i18n="usecases.asset2.copy">Dashboards, forms and mobile views that sit close to the daily workflow.</p>
-            </article>
-            <article class="workflow-asset">
-              <img src="assets/ai-component.webp" alt="Modular app cards and workflow dashboard">
-              <h3 data-i18n="usecases.asset3.title">Workflow components</h3>
-              <p data-i18n="usecases.asset3.copy">Approval cards, status views and action panels that make AI output usable.</p>
-            </article>
-          </div>
-
-          <div class="use-case-list" data-use-cases>
-            <button class="use-case-row is-active reveal" type="button" data-case="support">
-              <span class="use-case-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v10H8l-4 4V5Z"></path><path d="M8 9h8"></path><path d="M8 12h5"></path></svg>
-              </span>
-              <span data-i18n="usecases.support.label">Support automation</span>
-              <strong data-i18n="usecases.support.title">Summarize tickets, draft replies and escalate correctly.</strong>
-              <em data-i18n="usecases.support.stack">Inbox, CRM, knowledge base</em>
-            </button>
-            <button class="use-case-row reveal" type="button" data-case="leads">
-              <span class="use-case-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17V7l8-4 8 4v10l-8 4-8-4Z"></path><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
-              </span>
-              <span data-i18n="usecases.leads.label">Lead operations</span>
-              <strong data-i18n="usecases.leads.title">Qualify leads, create follow-up and prioritize sales effort.</strong>
-              <em data-i18n="usecases.leads.stack">CRM, email, calendar</em>
-            </button>
-            <button class="use-case-row reveal" type="button" data-case="documents">
-              <span class="use-case-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7V3Z"></path><path d="M14 3v5h4"></path><path d="M9.5 12h5"></path><path d="M9.5 16h4"></path></svg>
-              </span>
-              <span data-i18n="usecases.documents.label">Document workflows</span>
-              <strong data-i18n="usecases.documents.title">Read, structure and validate documents before the team decides.</strong>
-              <em data-i18n="usecases.documents.stack">PDF, forms, rules</em>
-            </button>
-            <button class="use-case-row reveal" type="button" data-case="reporting">
-              <span class="use-case-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V9"></path><path d="M12 20V4"></path><path d="M19 20v-7"></path></svg>
-              </span>
-              <span data-i18n="usecases.reporting.label">Reporting</span>
-              <strong data-i18n="usecases.reporting.title">Build dashboards, weekly summaries and deviation logs automatically.</strong>
-              <em data-i18n="usecases.reporting.stack">Database, BI, Slack/email</em>
-            </button>
-          </div>
-
-          <div class="case-preview reveal" aria-live="polite">
-            <div>
-              <small data-case-label>Support automation</small>
-              <h3 data-case-title>From messy inbox to prioritized tickets.</h3>
-              <p data-case-copy>
-                The AI reads incoming messages, matches them against routines, drafts replies
-                and creates a clear ticket for the team.
+              <p class="hero-copy" data-i18n="hero.copy">
+                We connect inboxes, documents, CRM and internal systems so AI can sort work,
+                draft replies, update records and show what needs human approval.
               </p>
-              <div class="case-flow" aria-label="Implementation flow">
-                <span data-i18n="usecases.flow.input">Input</span>
-                <span data-i18n="usecases.flow.decision">AI decision</span>
-                <span data-i18n="usecases.flow.action">Action</span>
+              <div class="button-row">
+                <a class="button primary" href="#contact">
+                  <span data-i18n="hero.primary">Book AI audit</span>
+                  <i aria-hidden="true">↗</i>
+                </a>
+                <a class="button secondary" href="#method">
+                  <span data-i18n="hero.secondary">See method</span>
+                  <i aria-hidden="true">↗</i>
+                </a>
+              </div>
+              <div class="trust-line">
+                <span data-i18n="hero.trust">Built with real operators</span>
+                <strong>Fruktkuriren / Omsorgskollen / TrustLedger / Stenmark Bil</strong>
               </div>
             </div>
-            <figure>
-              <div class="case-lab" aria-hidden="true">
-                <svg class="lab-connectors" viewBox="0 0 420 220" preserveAspectRatio="none">
-                  <path d="M78 48 C150 62 176 94 210 110"></path>
-                  <path d="M210 110 C262 128 302 148 352 158"></path>
-                </svg>
-                <span class="lab-node lab-input">Inbox</span>
-                <span class="lab-node lab-ai">AI triage</span>
-                <span class="lab-node lab-action">CRM update</span>
-                <div class="lab-panel">
-                  <small data-i18n="usecases.lab.confidence">Confidence</small>
-                  <strong>92%</strong>
-                </div>
-              </div>
-              <img src="assets/ai-component.webp" alt="Example AI component and internal workflow interface">
-            </figure>
           </div>
         </div>
       </section>
 
-      <section id="process" class="section process-section">
-        <div class="container process-story">
-          <div class="section-copy wide reveal">
-            <p class="kicker" data-i18n="process.kicker">Method</p>
-            <h2 data-i18n="process.title">From mapping to measurable impact, without losing control.</h2>
-            <p data-i18n="process.copy">
-              Each step unlocks the next. We start in the real workflow, build narrow,
-              connect to the systems and measure until the flow becomes a team habit.
-            </p>
-            <div class="process-meter" aria-hidden="true">
-              <span data-process-progress></span>
-            </div>
-            <div class="process-console" aria-hidden="true">
-              <span data-i18n="process.console.title">Implementation pulse</span>
-              <p><i></i> <span data-i18n="process.console.item1">scope locked</span></p>
-              <p><i></i> <span data-i18n="process.console.item2">integration mapped</span></p>
-              <p><i></i> <span data-i18n="process.console.item3">adoption measured</span></p>
-            </div>
-            <figure class="method-visual reveal">
-              <img src="assets/method-workflow-planning.png" alt="AI workflow planning with laptop, tablet and process notes">
-            </figure>
+      <section class="logo-strip reveal" aria-label="Selected SwiftBuild experience">
+        <div class="shell logo-strip-inner">
+          <div class="logo-strip-copy">
+            <p class="slash-label" data-i18n="clients.kicker">/ BUILT WITH OPERATORS</p>
+            <strong data-i18n="clients.copy">Experience from logistics, care, registries, fintech and automotive retail.</strong>
           </div>
-
-          <div class="timeline" data-journey>
-            <span class="timeline-progress" aria-hidden="true"></span>
-            <article class="timeline-item reveal" data-journey-step>
-              <span>01</span>
-              <div class="timeline-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"></path><path d="M4 12h10"></path><path d="M4 18h7"></path><path d="M17 14l3 3-3 3"></path></svg>
-              </div>
-              <h3 data-i18n="process.step1.title">Workflow mapping</h3>
-              <p data-i18n="process.step1.copy">We review the process, systems, data, decisions and where the team loses time.</p>
+          <div class="logo-row">
+            <article>
+              <img src="assets/client-stenmarkbil.png" alt="Stenmark Bil">
+              <span>Stenmark Bil</span>
             </article>
-            <article class="timeline-item reveal" data-journey-step>
-              <span>02</span>
-              <div class="timeline-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5V4Z"></path><path d="M8 8h8"></path><path d="M8 12h5"></path><path d="M8 16h7"></path></svg>
-              </div>
-              <h3 data-i18n="process.step2.title">Pilot design</h3>
-              <p data-i18n="process.step2.copy">We choose one workflow slice with clear input, expected output, business value, owner and success metric.</p>
+            <article>
+              <img src="assets/client-fruktkuriren.webp" alt="Fruktkuriren">
+              <span>Fruktkuriren</span>
             </article>
-            <article class="timeline-item reveal" data-journey-step>
-              <span>03</span>
-              <div class="timeline-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 7v10l7 4 7-4V7l-7-4Z"></path><path d="M12 8v8"></path><path d="M8.5 10.5 12 8l3.5 2.5"></path></svg>
-              </div>
-              <h3 data-i18n="process.step3.title">Implementation</h3>
-              <p data-i18n="process.step3.copy">We build automation, AI logic, integrations and the internal views the team needs.</p>
+            <article>
+              <img src="assets/client-omsorgskollen.png" alt="Omsorgskollen">
+              <span>Omsorgskollen</span>
             </article>
-            <article class="timeline-item reveal" data-journey-step>
-              <span>04</span>
-              <div class="timeline-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12.5 11 15l5-6"></path><path d="M4 7.5 12 3l8 4.5v8.5L12 21l-8-5V7.5Z"></path></svg>
-              </div>
-              <h3 data-i18n="process.step4.title">Training & handover</h3>
-              <p data-i18n="process.step4.copy">The team gets routines, documentation, control points and a simple path for improvement.</p>
+            <article>
+              <img src="assets/client-trustledger.png" alt="TrustLedger">
+              <span>TrustLedger</span>
             </article>
-            <article class="timeline-item reveal" data-journey-step>
-              <span>05</span>
-              <div class="timeline-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V9"></path><path d="M12 20V4"></path><path d="M19 20v-7"></path><path d="M4 20h17"></path></svg>
-              </div>
-              <h3 data-i18n="process.step5.title">Measurement</h3>
-              <p data-i18n="process.step5.copy">We track time saved, errors reduced, response time, adoption and what the next workflow should be.</p>
+            <article>
+              <img src="assets/client-familjehemsregistret.png" alt="Familjehemsregistret">
+              <span>Familjehemsregistret</span>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="proof" class="section proof-section">
-        <div class="container proof-layout">
+      <section class="pain-section">
+        <div class="shell pain-grid">
+          <div class="pain-marquee reveal" aria-hidden="true">
+            <span data-i18n="pain.repeat1">Manual tasks eat the week.</span>
+            <span data-i18n="pain.repeat2">Follow-up gets missed.</span>
+            <span data-i18n="pain.repeat3">Documents slow decisions.</span>
+            <span data-i18n="pain.repeat4">CRM is never updated.</span>
+          </div>
           <div class="section-copy reveal">
-            <p class="kicker">Proof</p>
-            <h2 data-i18n="proof.title">Built close to operations where details matter.</h2>
-            <p data-i18n="proof.copy">
-              SwiftBuild has experience with workflows across logistics, care, registries,
-              sales, finance and internal tools. The point is not another AI demo, but a
-              system the team can use on Monday.
-            </p>
-          </div>
-
-          <div class="proof-system reveal">
-            <div class="proof-orbit" aria-hidden="true">
-              <span class="proof-ring"></span>
-              <div class="proof-core">
-                <strong>5</strong>
-                <small data-i18n="proof.verticals">verticals</small>
-              </div>
-              <span class="proof-dot dot-one" data-i18n="proof.dot1">ops</span>
-              <span class="proof-dot dot-two" data-i18n="proof.dot2">care</span>
-              <span class="proof-dot dot-three">data</span>
-            </div>
-            <div class="proof-board">
-              <article class="proof-item">
-                <div class="proof-logo"><img src="assets/client-fruktkuriren.webp" alt="Fruktkuriren"></div>
-                <div>
-                  <strong>Fruktkuriren</strong>
-                  <span data-i18n="clients.fruktkuriren">orders, deviations, operations</span>
-                </div>
-              </article>
-              <article class="proof-item">
-                <div class="proof-logo"><img src="assets/client-omsorgskollen.png" alt="Omsorgskollen"></div>
-                <div>
-                  <strong>Omsorgskollen</strong>
-                  <span data-i18n="clients.omsorgskollen">structure, documentation, follow-up</span>
-                </div>
-              </article>
-              <article class="proof-item">
-                <div class="proof-logo"><img src="assets/client-trustledger.png" alt="TrustLedger"></div>
-                <div>
-                  <strong>TrustLedger</strong>
-                  <span data-i18n="clients.trustledger">data, control, automation</span>
-                </div>
-              </article>
-              <article class="proof-item">
-                <div class="proof-logo compact"><img src="assets/client-familjehemsregistret.png" alt=""></div>
-                <div>
-                  <strong>Familjehemsregistret</strong>
-                  <span data-i18n="clients.familjehemsregistret">registries, verification, internal tools</span>
-                </div>
-              </article>
-              <article class="proof-item">
-                <div class="proof-logo compact"><img src="assets/client-stenmarkbil.png" alt=""></div>
-                <div>
-                  <strong>Stenmark Bil</strong>
-                  <span data-i18n="clients.stenmarkbil">customer flows, CRM, admin</span>
-                </div>
-              </article>
-            </div>
+            <p class="slash-label" data-i18n="pain.kicker">/ THE BOTTLENECK</p>
+            <h2 data-i18n="pain.title">AI does not fail because the model is weak. It fails because it is not built into the workflow.</h2>
           </div>
         </div>
       </section>
 
-      <section class="section trust-section">
-        <div class="container trust-grid">
-          <figure class="product-visual reveal">
-            <img src="assets/delivery-ops.webp" alt="Example dashboard and operational app view">
+      <section class="section media-section">
+        <div class="shell media-layout">
+          <div class="media-copy reveal">
+            <p class="slash-label" data-i18n="media.kicker">/ CONTROLLED IMPLEMENTATION</p>
+            <h2 data-i18n="media.title">The result is not a chatbot. It is an operating flow your team can trust.</h2>
+            <p data-i18n="media.copy">Every useful AI implementation needs the same foundation: connected data, a clear owner, visible decisions, fallback routines and a way to measure whether the team actually uses it.</p>
+          </div>
+          <figure class="media-frame reveal">
+            <img src="assets/delivery-ops.webp" alt="Delivery operations workflow interface">
+            <figcaption>
+              <span data-i18n="media.note1">Input: messages, documents and CRM</span>
+              <span data-i18n="media.note2">Output: reviewed actions and measured impact</span>
+            </figcaption>
           </figure>
+        </div>
+      </section>
 
-          <div class="trust-copy reveal">
-            <p class="kicker" data-i18n="trust.kicker">Controlled implementation</p>
-            <h2 data-i18n="trust.title">AI needs points of responsibility, not just automation.</h2>
-            <div class="trust-list">
-              <div>
-                <span></span>
-                <p data-i18n="trust.item1">Human-in-the-loop where decisions need review.</p>
-              </div>
-              <div>
-                <span></span>
-                <p data-i18n="trust.item2">Logs that show what the AI did and why.</p>
-              </div>
-              <div>
-                <span></span>
-                <p data-i18n="trust.item3">Fallback routines when data is missing or confidence is low.</p>
-              </div>
-              <div>
-                <span></span>
-                <p data-i18n="trust.item4">Documentation so the team can own the flow after delivery.</p>
-              </div>
-            </div>
+      <section id="services" class="section section-dark">
+        <div class="shell">
+          <div class="section-head reveal">
+            <p class="slash-label" data-i18n="services.kicker">/ SERVICES</p>
+            <h2 data-i18n="services.title">Practical AI systems for work people already do.</h2>
+            <p data-i18n="services.copy">No vague AI strategy decks. We build the flows that remove repeated work and create visible operational leverage.</p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card reveal">
+              <img src="assets/ai-ops-workspace.png" alt="Operations dashboard">
+              <span>/ 01</span>
+              <h3 data-i18n="services.item1.title">Support and inbox automation</h3>
+              <p data-i18n="services.item1.copy">Turn incoming messages into classified tickets, drafted replies and clear next actions.</p>
+            </article>
+            <article class="service-card reveal">
+              <img src="assets/hero-app-card.webp" alt="Internal tool interface">
+              <span>/ 02</span>
+              <h3 data-i18n="services.item2.title">Internal AI tools</h3>
+              <p data-i18n="services.item2.copy">Build dashboards, forms and review views around the exact workflow your team uses.</p>
+            </article>
+            <article class="service-card reveal">
+              <img src="assets/method-workflow-planning.png" alt="Workflow planning">
+              <span>/ 03</span>
+              <h3 data-i18n="services.item3.title">Document and data workflows</h3>
+              <p data-i18n="services.item3.copy">Extract details from files, compare them with rules and flag what needs review.</p>
+            </article>
+            <article class="service-card reveal">
+              <img src="assets/ai-component.webp" alt="Workflow component interface">
+              <span>/ 04</span>
+              <h3 data-i18n="services.item4.title">CRM follow-up automation</h3>
+              <p data-i18n="services.item4.copy">Summarize leads, update records and trigger reminders before opportunities go cold.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section faq-section">
-        <div class="container faq-layout">
-          <div class="section-copy reveal">
-            <p class="kicker" data-i18n="faq.kicker">FAQ</p>
-            <h2 data-i18n="faq.title">The practical details before we start.</h2>
+      <section id="proof" class="section section-light">
+        <div class="shell">
+          <div class="section-head compact reveal">
+            <p class="slash-label" data-i18n="proof.kicker">/ PROOF</p>
+            <h2 data-i18n="proof.title">Built close to operations, not as isolated demos.</h2>
           </div>
 
+          <div class="case-grid">
+            <article class="case-card reveal">
+              <div class="case-logo"><img src="assets/client-fruktkuriren.webp" alt="Fruktkuriren"></div>
+              <span data-i18n="proof.label1">/ OPERATIONS</span>
+              <h3>Fruktkuriren</h3>
+              <p data-i18n="proof.case1">Orders, deviations and delivery follow-up where speed matters.</p>
+            </article>
+            <article class="case-card reveal">
+              <div class="case-logo"><img src="assets/client-omsorgskollen.png" alt="Omsorgskollen"></div>
+              <span data-i18n="proof.label2">/ CARE</span>
+              <h3>Omsorgskollen</h3>
+              <p data-i18n="proof.case2">Structured documentation and follow-up in a regulated care environment.</p>
+            </article>
+            <article class="case-card reveal">
+              <div class="case-logo"><img src="assets/client-trustledger.png" alt="TrustLedger"></div>
+              <span data-i18n="proof.label3">/ DATA</span>
+              <h3>TrustLedger</h3>
+              <p data-i18n="proof.case3">Data flows where traceability, control and automation matter.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="method" class="section method-section">
+        <div class="shell method-layout">
+          <div class="section-copy sticky-copy reveal">
+            <p class="slash-label" data-i18n="method.kicker">/ METHOD</p>
+            <h2 data-i18n="method.title">A simple implementation path: map, build, control, measure.</h2>
+            <p data-i18n="method.copy">We start with one painful workflow. Then we connect the systems, build the AI logic, add human review and measure whether the flow is actually used.</p>
+            <figure class="method-visual">
+              <img src="assets/method-workflow-planning.png" alt="AI workflow planning with laptop and process notes">
+            </figure>
+          </div>
+
+          <div class="step-list">
+            <article class="step-card reveal">
+              <span>/ 01</span>
+              <h3 data-i18n="method.step1.title">Map the real workflow</h3>
+              <p data-i18n="method.step1.copy">Systems, inputs, handovers, decisions, exceptions and where time disappears.</p>
+            </article>
+            <article class="step-card reveal">
+              <span>/ 02</span>
+              <h3 data-i18n="method.step2.title">Build the narrow automation</h3>
+              <p data-i18n="method.step2.copy">One flow with clear input, output, owner and business result.</p>
+            </article>
+            <article class="step-card reveal">
+              <span>/ 03</span>
+              <h3 data-i18n="method.step3.title">Add control points</h3>
+              <p data-i18n="method.step3.copy">Logs, fallbacks and human approval where a wrong decision would cost too much.</p>
+            </article>
+            <article class="step-card reveal">
+              <span>/ 04</span>
+              <h3 data-i18n="method.step4.title">Measure adoption</h3>
+              <p data-i18n="method.step4.copy">Saved time, response speed, quality and whether the team keeps using it.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section comparison-section">
+        <div class="shell compare-grid">
+          <div class="section-copy reveal">
+            <p class="slash-label" data-i18n="compare.kicker">/ WHY IT WORKS</p>
+            <h2 data-i18n="compare.title">The difference is implementation, not AI hype.</h2>
+          </div>
+          <div class="compare-columns">
+            <article class="compare-card reveal">
+              <h3>SwiftBuild</h3>
+              <ul>
+                <li data-i18n="compare.good1">Connects to your existing systems</li>
+                <li data-i18n="compare.good2">Builds workflows with logs and review</li>
+                <li data-i18n="compare.good3">Measures real operational effect</li>
+              </ul>
+            </article>
+            <article class="compare-card muted reveal">
+              <h3 data-i18n="compare.other">Generic AI projects</h3>
+              <ul>
+                <li data-i18n="compare.bad1">Another chat or dashboard</li>
+                <li data-i18n="compare.bad2">No owner for quality</li>
+                <li data-i18n="compare.bad3">Demo works, daily workflow does not</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq-section">
+        <div class="shell faq-layout">
+          <div class="section-copy reveal">
+            <p class="slash-label">/ FAQ</p>
+            <h2 data-i18n="faq.title">Questions before we start.</h2>
+          </div>
           <div class="faq-list">
             <details class="faq-item reveal" open>
-              <summary data-i18n="faq.q1">What happens in an AI workflow audit?</summary>
-              <p data-i18n="faq.a1">We look at where your team loses time, choose one workflow to improve and define exactly what AI should do.</p>
+              <summary data-i18n="faq.q1">What happens first?</summary>
+              <p data-i18n="faq.a1">We identify one workflow where automation can remove repeated work or reduce missed follow-up.</p>
             </details>
             <details class="faq-item reveal">
               <summary data-i18n="faq.q2">Do we need to replace our systems?</summary>
-              <p data-i18n="faq.a2">Usually not. The point is to connect AI and automation to your existing tools where possible.</p>
+              <p data-i18n="faq.a2">Usually not. The goal is to connect AI to the tools your team already uses.</p>
             </details>
             <details class="faq-item reveal">
-              <summary data-i18n="faq.q3">What do we need before starting?</summary>
-              <p data-i18n="faq.a3">A workflow worth improving, access to the relevant systems or exports, and someone who understands how the work is done today.</p>
-            </details>
-            <details class="faq-item reveal">
-              <summary data-i18n="faq.q4">How quickly can we see something concrete?</summary>
-              <p data-i18n="faq.a4">Usually the first step is a small pilot around one workflow, so you can see whether it saves time before expanding.</p>
+              <summary data-i18n="faq.q3">Can you build real internal tools?</summary>
+              <p data-i18n="faq.a3">Yes. We build interfaces, automations and AI logic around the workflow, not just prompts.</p>
             </details>
           </div>
         </div>
       </section>
 
       <section id="contact" class="contact-section">
-        <div class="container contact-layout">
+        <div class="shell contact-layout">
           <div class="contact-copy reveal">
-            <p class="kicker" data-i18n="contact.kicker">Next step</p>
-            <h2 data-i18n="contact.title">Book an AI workflow audit.</h2>
-            <p data-i18n="contact.copy">
-              Send a short note about the workflow that takes the most time today.
-              We will reply with the next step and what would be reasonable to automate first.
-            </p>
-            <a class="button primary light" href="mailto:info@swiftbuild.agency?subject=AI%20workflow%20audit%20with%20SwiftBuild">
-              info@swiftbuild.agency
-            </a>
+            <p class="slash-label" data-i18n="contact.kicker">/ WORK WITH US</p>
+            <h2 data-i18n="contact.title">Tell us what your team still does manually.</h2>
+            <p data-i18n="contact.copy">Send the workflow that costs time today. We will reply with what would be reasonable to automate first.</p>
+            <a href="mailto:info@swiftbuild.agency">info@swiftbuild.agency</a>
           </div>
 
           <form class="contact-form reveal" action="https://formsubmit.co/ajax/info@swiftbuild.agency" method="post" data-contact-form>
@@ -686,21 +325,24 @@
             <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="form-honey" aria-hidden="true">
             <label>
               <span data-i18n="form.name">Name</span>
-              <input type="text" name="name" autocomplete="name" placeholder="Your name" data-i18n-placeholder="form.namePlaceholder" required>
+              <input type="text" name="name" autocomplete="name" required>
             </label>
             <label>
               <span data-i18n="form.company">Company</span>
-              <input type="text" name="company" autocomplete="organization" placeholder="Company" data-i18n-placeholder="form.companyPlaceholder">
+              <input type="text" name="company" autocomplete="organization">
             </label>
             <label>
               <span data-i18n="form.email">Email</span>
-              <input type="email" name="email" autocomplete="email" placeholder="name@company.com" data-i18n-placeholder="form.emailPlaceholder" required>
+              <input type="email" name="email" autocomplete="email" required>
             </label>
             <label>
-              <span data-i18n="form.workflow">What do you want to automate?</span>
-              <textarea name="workflow" rows="5" placeholder="Example: support tickets, CRM follow-up, reporting, document workflows..." data-i18n-placeholder="form.workflowPlaceholder"></textarea>
+              <span data-i18n="form.workflow">Workflow</span>
+              <textarea name="workflow" rows="5" data-i18n-placeholder="form.workflowPlaceholder" placeholder="Example: support requests, document review, CRM follow-up..."></textarea>
             </label>
-            <button class="button primary" type="submit" data-i18n="form.submit">Send audit request</button>
+            <button class="button primary" type="submit">
+              <span data-i18n="form.submit">Send request</span>
+              <i aria-hidden="true">↗</i>
+            </button>
             <p class="form-status" data-form-status role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -708,15 +350,12 @@
     </main>
 
     <footer class="footer">
-      <div class="container footer-inner">
+      <div class="shell footer-inner">
         <a class="footer-logo" href="#top" aria-label="SwiftBuild home">
           <img src="assets/swiftbuild-logo.png" alt="SwiftBuild" width="158" height="50">
         </a>
-        <p data-i18n="footer.copy">AI workflows, internal tools and automation for real operating workflows.</p>
-        <div>
-          <a href="mailto:info@swiftbuild.agency">info@swiftbuild.agency</a>
-          <a href="https://swiftbuild.agency">swiftbuild.agency</a>
-        </div>
+        <p data-i18n="footer.copy">AI implementation for real operating workflows.</p>
+        <a href="https://swiftbuild.agency">swiftbuild.agency</a>
       </div>
     </footer>
 
