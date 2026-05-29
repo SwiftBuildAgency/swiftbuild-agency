@@ -25,7 +25,6 @@
 
       <nav class="site-nav" aria-label="Main navigation">
         <a href="#services" data-i18n="nav.services">Services</a>
-        <a href="#works" data-i18n="nav.works">Works</a>
         <a href="#approach" data-i18n="nav.approach">Approach</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
       </nav>
@@ -45,7 +44,6 @@
 
     <div class="mobile-menu" data-mobile-panel>
       <a href="#services" data-i18n="nav.services">Services</a>
-      <a href="#works" data-i18n="nav.works">Works</a>
       <a href="#approach" data-i18n="nav.approach">Approach</a>
       <a href="#faq" data-i18n="nav.faq">FAQ</a>
       <a href="#contact" data-i18n="nav.cta">Work with us</a>
@@ -66,8 +64,8 @@
                 <span data-i18n="hero.primary">Get free workflow audit</span>
                 <i aria-hidden="true"></i>
               </a>
-              <a class="button button-light" href="#works">
-                <span data-i18n="hero.secondary">See work</span>
+              <a class="button button-light" href="#services">
+                <span data-i18n="hero.secondary">See services</span>
                 <i aria-hidden="true"></i>
               </a>
             </div>
@@ -75,14 +73,7 @@
 
           <div class="hero-visual reveal">
             <figure class="hero-object" data-depth="18">
-              <img src="assets/swiftbuild-hero-object.png" alt="SwiftBuild abstract AI workflow object">
-            </figure>
-            <figure class="showreel-card" data-depth="-10">
-              <img src="assets/ai-ops-workspace.png" alt="AI operations workspace">
-              <figcaption>
-                <span data-i18n="hero.showreel">/ Implementation reel</span>
-                <strong data-i18n="hero.showreelTitle">From manual admin to controlled AI flow</strong>
-              </figcaption>
+              <img src="assets/swiftbuild-hero-object-transparent.png" alt="SwiftBuild abstract AI workflow object">
             </figure>
           </div>
         </div>
@@ -125,13 +116,18 @@
           </div>
         </div>
         <div class="container bottleneck-grid">
-          <p class="section-marker reveal">/</p>
-          <h2 class="reveal" data-i18n="bottleneck.title">Eliminate the bottlenecks that hold your team back.</h2>
-          <div class="bottleneck-points reveal">
-            <p data-i18n="bottleneck.point1">Support messages sit too long before anyone knows what matters.</p>
-            <p data-i18n="bottleneck.point2">Documents and CRM updates depend on manual copy-paste.</p>
-            <p data-i18n="bottleneck.point3">Reporting takes hours because the data lives in different places.</p>
+          <div class="bottleneck-copy">
+            <p class="section-marker reveal">/</p>
+            <h2 class="reveal" data-i18n="bottleneck.title">Eliminate the bottlenecks that hold your team back.</h2>
+            <div class="bottleneck-points reveal">
+              <p data-i18n="bottleneck.point1">Support messages sit too long before anyone knows what matters.</p>
+              <p data-i18n="bottleneck.point2">Documents and CRM updates depend on manual copy-paste.</p>
+              <p data-i18n="bottleneck.point3">Reporting takes hours because the data lives in different places.</p>
+            </div>
           </div>
+          <figure class="bottleneck-asset reveal">
+            <img src="assets/bottleneck-flow-asset.png" alt="Bottleneck turning into connected AI workflow">
+          </figure>
         </div>
         <div class="bottleneck-lines bottom" aria-hidden="true">
           <div class="ticker ticker-left">
@@ -180,55 +176,6 @@
             <span>/ 04</span>
             <h3 data-i18n="services.item4.title">CRM and follow-up automation</h3>
             <p data-i18n="services.item4.copy">Summaries, next steps, reminders and updates so opportunities do not disappear.</p>
-          </article>
-          <article class="service-card wide reveal">
-            <figure><img src="assets/delivery-ops.webp" alt="Delivery operations dashboard"></figure>
-            <span>/ 05</span>
-            <h3 data-i18n="services.item5.title">Operations reporting</h3>
-            <p data-i18n="services.item5.copy">Turn scattered operational data into clear summaries, deviation logs and decisions.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="works" class="section works-section">
-        <div class="container section-heading split">
-          <div>
-            <p class="section-marker reveal" data-i18n="works.kicker">/ Case studies</p>
-            <h2 class="reveal" data-i18n="works.title">Latest works</h2>
-          </div>
-          <a class="button button-light reveal" href="#contact">
-            <span data-i18n="works.cta">Talk about your workflow</span>
-            <i aria-hidden="true"></i>
-          </a>
-        </div>
-
-        <div class="container work-grid">
-          <article class="work-card reveal">
-            <div class="work-top">
-              <img src="assets/client-fruktkuriren.webp" alt="Fruktkuriren">
-              <span>/ 2026</span>
-            </div>
-            <h3 data-i18n="works.case1.title">Operations flow for orders, deviations and follow-up.</h3>
-            <div class="work-metrics">
-              <p><strong>18h</strong><span data-i18n="works.metric1">manual work identified</span></p>
-              <p><strong>4</strong><span data-i18n="works.metric2">systems mapped</span></p>
-              <p><strong>1</strong><span data-i18n="works.metric3">pilot workflow</span></p>
-            </div>
-            <figure><img src="assets/delivery-ops.webp" alt="Operations workflow preview"></figure>
-          </article>
-
-          <article class="work-card reveal">
-            <div class="work-top">
-              <img src="assets/client-omsorgskollen.png" alt="Omsorgskollen">
-              <span>/ 2026</span>
-            </div>
-            <h3 data-i18n="works.case2.title">Structured documentation and review for care workflows.</h3>
-            <div class="work-metrics">
-              <p><strong>3</strong><span data-i18n="works.metric4">review points</span></p>
-              <p><strong>0</strong><span data-i18n="works.metric5">black box logic</span></p>
-              <p><strong>100%</strong><span data-i18n="works.metric6">human control</span></p>
-            </div>
-            <figure><img src="assets/method-workflow-planning.png" alt="Care workflow planning preview"></figure>
           </article>
         </div>
       </section>

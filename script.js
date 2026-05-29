@@ -21,7 +21,6 @@ const translations = {
     metaDescription:
       "SwiftBuild implements practical AI workflows, internal tools and automation for support, documents, CRM follow-up and operations.",
     "nav.services": "Services",
-    "nav.works": "Works",
     "nav.approach": "Approach",
     "nav.faq": "FAQ",
     "nav.cta": "Work with us",
@@ -29,9 +28,7 @@ const translations = {
     "hero.copy":
       "We build AI into the real operating flow: inbox, CRM, documents, reporting and the human approvals that keep quality under control.",
     "hero.primary": "Get free workflow audit",
-    "hero.secondary": "See work",
-    "hero.showreel": "/ Implementation reel",
-    "hero.showreelTitle": "From manual admin to controlled AI flow",
+    "hero.secondary": "See services",
     "trust.kicker": "Built with real operators",
     "bottleneck.line1": "Teams spend too much time on repetitive admin.",
     "bottleneck.line2": "Leads slip away without consistent follow-up.",
@@ -59,17 +56,6 @@ const translations = {
     "services.item5.title": "Operations reporting",
     "services.item5.copy":
       "Turn scattered operational data into clear summaries, deviation logs and decisions.",
-    "works.kicker": "/ Case studies",
-    "works.title": "Latest works",
-    "works.cta": "Talk about your workflow",
-    "works.case1.title": "Operations flow for orders, deviations and follow-up.",
-    "works.case2.title": "Structured documentation and review for care workflows.",
-    "works.metric1": "manual work identified",
-    "works.metric2": "systems mapped",
-    "works.metric3": "pilot workflow",
-    "works.metric4": "review points",
-    "works.metric5": "black box logic",
-    "works.metric6": "human control",
     "approach.kicker": "/ Our approach",
     "approach.step1.title": "Discover",
     "approach.step1.copy":
@@ -133,7 +119,6 @@ const translations = {
     metaDescription:
       "SwiftBuild implementerar praktiska AI-flöden, interna verktyg och automation för support, dokument, CRM-uppföljning och operations.",
     "nav.services": "Tjänster",
-    "nav.works": "Case",
     "nav.approach": "Metod",
     "nav.faq": "FAQ",
     "nav.cta": "Jobba med oss",
@@ -141,9 +126,7 @@ const translations = {
     "hero.copy":
       "Vi bygger in AI i det riktiga arbetsflödet: inbox, CRM, dokument, rapportering och mänskliga godkännanden som håller kvaliteten under kontroll.",
     "hero.primary": "Boka gratis workflow-audit",
-    "hero.secondary": "Se case",
-    "hero.showreel": "/ Implementationsvy",
-    "hero.showreelTitle": "Från manuell admin till kontrollerat AI-flöde",
+    "hero.secondary": "Se tjänster",
     "trust.kicker": "Byggt med riktiga verksamheter",
     "bottleneck.line1": "Team lägger för mycket tid på repetitiv admin.",
     "bottleneck.line2": "Leads tappas när uppföljningen inte sker.",
@@ -172,17 +155,6 @@ const translations = {
     "services.item5.title": "Operationsrapportering",
     "services.item5.copy":
       "Gör utspridd operativ data till tydliga summeringar, avvikelser och beslut.",
-    "works.kicker": "/ Case studies",
-    "works.title": "Senaste arbeten",
-    "works.cta": "Prata om ert flöde",
-    "works.case1.title": "Operationsflöde för order, avvikelser och uppföljning.",
-    "works.case2.title": "Strukturerad dokumentation och granskning för omsorgsflöden.",
-    "works.metric1": "manuellt arbete hittat",
-    "works.metric2": "system kartlagda",
-    "works.metric3": "pilotflöde",
-    "works.metric4": "granskningspunkter",
-    "works.metric5": "black box-logik",
-    "works.metric6": "mänsklig kontroll",
     "approach.kicker": "/ Vår metod",
     "approach.step1.title": "Discover",
     "approach.step1.copy":
@@ -333,7 +305,7 @@ const initReveals = () => {
   root.classList.add("reveal-ready");
 
   revealEls.forEach((element, index) => {
-    element.style.setProperty("--reveal-delay", `${Math.min(index % 6, 4) * 55}ms`);
+    element.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 30}ms`);
     const rect = element.getBoundingClientRect();
     if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0) {
       element.classList.add("is-visible");
